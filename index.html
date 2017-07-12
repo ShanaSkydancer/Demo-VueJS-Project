@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Demo VueJS Project</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.sass">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.css">
+  </head>
+  <body>
+
+    <nav class="navbar ">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="http://www.zelda.com">
+          <img src="https://vignette2.wikia.nocookie.net/zelda/images/4/40/The_Legend_of_Zelda_series_%28logo%29.png/revision/latest?cb=20090219032815" alt="The Legend of Zelda" width="112px" height="58px">
+        </a>
+      </div>
+    </nav>
+
+    <div id="root" class="container">
+
+      <tabs>
+        <tab name="About Breath of the Wild" :selected="true">
+          <h1>The Legend of Zelda: Breath of the Wild is an action-adventure video game developed and published by Nintendo for the Nintendo Switch and Wii U video game consoles.</h1>
+          <br>
+          <h1>The Legend of Zelda: Breath of the Wild departs from most games in The Legend of Zelda series, as it features an open-world environment, twelve times larger than the overworld in Twilight Princess, with less emphasis on defined entrances and exits to areas. Similar to the original The Legend of Zelda, the player is placed into the game's world with very little instruction, and is allowed to explore freely at their own pace.</h2>
+            <br>
+          <h2>Taking control of Link, players are able to freely explore Hyrule, with actions such as running, climbing, swimming, and gliding with a paraglider using up stamina. Unlike other games where Link obtains specific key weapons for permanent use, the player must procure various items from the environment, including melee weapons, bows, and shields, which break after excessive use. Many items have multiple uses; for example, wooden weapons can be set to light fires and shields can be used as makeshift snowboards, a practice known in-game as shield surfing. Players can also obtain various food and materials, such as meat from hunted animals, monster parts from defeated enemies, and valuable gemstones from ore reserves. By cooking various combinations of food or materials, the player can create meals and elixirs that can replenish Link's health and stamina, or provide temporary status bonuses such as increased strength or resistance against cold environments. Near the start of the game, Link obtains multiple rune powers that are installed onto his Sheikah Slate, which can also be used to mark waypoints on a map and take pictures. These include remote bombs, which come in cube and spherical forms; Magnesis, which can be used to manipulate metal objects; Cryonis, which forms ice blocks on watery surfaces; and Stasis, which temporarily stops objects in time, during which the player can build up kinetic energy which is released once time resumes. Players will need to be cautious of environmental climate and changes in the weather; for example, cold environments will damage Link unless he wears warm clothing or eats spicy food, while lightning will become attracted to metal objects during thunderstorms.</h2>
+            <br>
+          <h2>Spread throughout Hyrule's overworld are towers and shrines, activating either of which adds waypoints that the player may warp to at any time. Activating towers adds the surrounding territory to the player's map, although specific location names are not added until the player explores that area for themselves. Shrines replace the series' traditional dungeons, instead consisting of smaller challenges ranging from puzzle solving to battles against robotic opponents, with some shrines requiring a puzzle to be solved on the overworld to enter. Clearing these shrines earns Spirit Orbs, which can be traded in for additional heart containers or an expanded stamina wheel. Also scattered across the overworld are various small puzzles that reveal the hiding places of Koroks. Solving these puzzles earns Korok Seeds, which can be traded in to expand inventory size for weapons, shields, and bows. Players may also scan Amiibo figures to add items into the game, including Link's horse Epona and Wolf Link from Twilight Princess. If the player fulfills certain conditions, they are able to unlock an alternative ending of the game.</h2>
+            <br>
+            <br>
+        </tab>
+
+        <tab name="All Zelda Games">
+          <h1>
+            <li>The Legend of Zelda</li>
+            <li>Zelda II: The Adventure of Link</li>
+            <li>The Legend of Zelda: A Link to the Past</li>
+            <li>The Legend of Zelda: Link's Awakening</li>
+            <li>The Legend of Zelda: Ocarina of Time</li>
+            <li>The Legend of Zelda: Majora's Mask</li>
+            <li>The Legend of Zelda: Oracle of Ages</li>
+            <li>The Legend of Zelda: Oracle of Seasons</li>
+            <li>The Legend of Zelda: A Link to the Past and Four Swords</li>
+            <li>The Legend of Zelda: The Wind Waker</li>
+            <li>The Legend of Zelda: Four Swords Adventures</li>
+            <li>The Legend of Zelda: The Minish Cap</li>
+            <li>The Legend of Zelda: Twilight Princess</li>
+            <li>The Legend of Zelda: Phantom Hourglass</li>
+            <li>The Legend of Zelda: Spirit Tracks</li>
+            <li>The Legend of Zelda: Skyward Sword</li>
+            <li>The Legend of Zelda: A Link Between Worlds</li>
+            <li>The Legend of Zelda: Tri Force Heroes</li>
+            <li>The Legend of Zelda: Breath of the Wild</li>
+          </h1>
+        </tab>
+
+        <tab name="Our Social Media">
+          <h1>
+            <a href="https://www.facebook.com/LegendofZelda/">Facebook</a>
+            <br>
+            <a href="https://twitter.com/ZeldaUniverse">Twitter</a>
+            <br>
+            <a href="http://www.zelda.com">Nintendo site</a>
+          </h1>
+            <br>
+            <modal v-if="newestTweet" @close="newestTweet = false"></modal>
+            <button @click="newestTweet = true">Newest Tweet</button>
+        </tab>
+
+        <tab name="Contact us">
+          <h1>Send us a message</h1>
+          <input id="input" type="text" v-model="newInput">
+          <button @click="addMessage">Send</button>
+        </tab>
+      </tabs>
+
+    </div>
+
+    <!-- <script src="https://unpkg.com/vue@2.3.4"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.js"></script>
+    <script src="main.js"></script>
+
+  </body>
+</html>
