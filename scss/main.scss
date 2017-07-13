@@ -1,0 +1,37 @@
+$white: #fff;
+$green: #308825;
+
+body {
+  padding-top: 4px;
+  padding-left: 2px;
+  background: $white;
+  font-size: 16px;
+}
+
+a {
+  color: $green;
+}
+
+.navbar {
+  height: 7.25rem;
+  .navbar-brand{
+    .navbar-item{
+        img {
+          margin-top: 78px;
+          width: 400px!important;
+          height: auto!important;
+          max-height: 7.75rem;
+        }
+      }
+    }
+}
+
+.tabs{
+  li {
+    &.is-active
+    a {
+      color: $green;
+      border-bottom-color: $green;
+      }
+    }
+  }
